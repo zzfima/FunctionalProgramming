@@ -24,4 +24,12 @@ let pipeline() =
     |> Console.WriteLine
 pipeline()
 
+let func_chaining =
+    let add_num x = x + 2
+    let mul_num x = x * 3
+    let add_mul = add_num >> mul_num
+    let mul_add = add_num << mul_num
+    Console.WriteLine($"add_mul(3) = {add_mul(3)}, mul_add (3) = {mul_add(3)}")
+func_chaining
+
 let _ = Console.ReadLine()
