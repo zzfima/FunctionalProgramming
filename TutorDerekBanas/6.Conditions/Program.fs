@@ -1,12 +1,14 @@
 ﻿open System
 
 let print_age age = 
-    if age < 10 then
-        Console.WriteLine("is a kid")
-    elif age < 24 then
-        Console.WriteLine("is a young")
+    if age < 5 then
+        Console.WriteLine("Preschool")
+    elif age = 5 then
+        Console.WriteLine("Kindergarten")
+    elif ((age > 5) && (age <= 18))  then
+        Console.WriteLine($"Grade is {age - 5}")
     else
-        Console.WriteLine("is a big")
+        Console.WriteLine("College")
 
 [1;11;33] |> List.iter(fun a -> print_age(a))
 
